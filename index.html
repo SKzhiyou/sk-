@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的聊天礼物网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 欢迎来到我的网站 🌟</h1>
+            <p>与朋友聊天，发送有趣礼物！</p>
+        </header>
+
+        <!-- 聊天室区域 -->
+        <section class="chat-section">
+            <h2>💬 聊天室</h2>
+            <div id="chat-box"></div>
+            <div class="input-group">
+                <input type="text" id="message-input" placeholder="输入消息...">
+                <button onclick="sendMessage()">发送</button>
+            </div>
+        </section>
+
+        <!-- 礼物区域 -->
+        <section class="gift-section">
+            <h2>🎁 发送礼物</h2>
+            <div class="gift-buttons">
+                <button class="gift-btn" onclick="sendGift('❤️')">爱心</button>
+                <button class="gift-btn" onclick="sendGift('🎁')">礼物盒</button>
+                <button class="gift-btn" onclick="sendGift('⭐')">星星</button>
+                <button class="gift-btn" onclick="sendGift('🎉')">礼花</button>
+            </div>
+            <div id="gift-display"></div>
+        </section>
+
+        <footer>
+            <p>© 2025 我的网站 | MIT许可证</p>
+        </footer>
+    </div>
+
+    <!-- LeanCloud SDK -->
+    <script src="https://unpkg.com/leancloud-storage@4.13.2/dist/av-min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
